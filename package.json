@@ -1,41 +1,46 @@
 {
-  "name": "AdoptMeProject",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "dev": "parcel src/index.html",
-    "dev-mock": "cross-env PET_MOCK=mock parcel src/index.html",
-    "format": "prettier \"src/**/*.{js,html}\" --write",
-    "lint": "eslint \"src/**/*.{js, jsx}\" --quiet",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "@babel/core": "^7.12.17",
-    "@babel/plugin-proposal-class-properties": "^7.12.13",
-    "@babel/preset-env": "^7.12.17",
-    "@babel/preset-react": "^7.12.13",
-    "babel-eslint": "^10.1.0",
-    "cross-env": "^7.0.3",
-    "eslint": "^7.18.0",
-    "eslint-config-prettier": "^7.2.0",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-jsx-a11y": "^6.4.1",
-    "eslint-plugin-react": "^7.22.0",
-    "eslint-plugin-react-hooks": "^4.2.0",
-    "parcel-bundler": "^1.12.4",
-    "prettier": "^2.2.1"
-  },
-  "dependencies": {
-    "@frontendmasters/pet": "^1.0.3",
-    "@reach/router": "^1.3.4",
-    "react": "^16.14.0",
-    "react-dom": "^16.14.0"
-  },
-  "browserslist": [
-    "last 2 Chrome versions"
-  ]
+    "name": "AdoptMeProject",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "build": "parcel build --public-url ./dist/ src/index.html",
+        "dev": "parcel src/index.html",
+        "dev-mock": "cross-env PET_MOCK=mock parcel src/index.html",
+        "format": "prettier \"src/**/*.{js,html}\" --write",
+        "lint": "eslint \"src/**/*.{js, jsx}\" --quiet",
+        "start": "npm -s run build && babel-node server/index.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@babel/cli": "^7.13.10",
+        "@babel/core": "^7.13.10",
+        "@babel/plugin-proposal-class-properties": "^7.12.13",
+        "@babel/preset-env": "^7.12.17",
+        "@babel/preset-react": "^7.12.13",
+        "babel-eslint": "^10.1.0",
+        "cross-env": "^7.0.3",
+        "eslint": "^7.18.0",
+        "eslint-config-prettier": "^7.2.0",
+        "eslint-plugin-import": "^2.22.1",
+        "eslint-plugin-jsx-a11y": "^6.4.1",
+        "eslint-plugin-react": "^7.22.0",
+        "eslint-plugin-react-hooks": "^4.2.0",
+        "parcel-bundler": "^1.12.4",
+        "prettier": "^2.2.1"
+    },
+    "dependencies": {
+        "@babel/node": "^7.13.10",
+        "@frontendmasters/pet": "^1.0.3",
+        "@reach/router": "^1.3.4",
+        "express": "^4.17.1",
+        "react": "^16.14.0",
+        "react-dom": "^16.14.0"
+    },
+    "browserslist": [
+        "last 2 Chrome versions"
+    ]
 }
